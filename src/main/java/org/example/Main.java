@@ -1,5 +1,3 @@
-package org.example;
-
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -9,55 +7,55 @@ class Student
     private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     public  float gpa;
     public final String name;
-    public String Grade;
-    Student(String name,float gpa,String Grade)
+    String grade;
+    Student(String name,float gpa,String grade)
     {
         this.name=name;
         this.gpa=gpa;
-        this.Grade=Grade;
+        this.grade =grade;
     }
     public void update(float value)
     {
         gpa=value;
         if(value>=9)
         {
-            Grade="O";
+            grade="O";
         }
         else if(value>=8)
         {
-            Grade="A+";
+            grade="A+";
 
         }
         else if(value>=7)
         {
-            Grade="A";
+            grade="A";
 
         }
         else if(value>=6)
         {
-            Grade="B+";
+            grade="B+";
 
         }
         else if(value>=5)
         {
-            Grade="B";
+            grade="B";
 
         }
         else
         {
-            Grade="F";
+            grade="F";
 
         }
-        LOGGER.log(Level.INFO,"---Updated Successfully---");
+         LOGGER.log(Level.INFO,"---Updated Successfully---");
 
     }
     public String display()
     {
         String dublicate=String.valueOf(gpa);
-        return name+" has a "+dublicate+" GPA "+" and GRADE is "+Grade;
+        return name+" has a "+dublicate+" GPA "+" and grade is "+grade;
     }
 }
-public class Main
+public class School
 {
     private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     public static void main(String[] args)
@@ -80,13 +78,13 @@ public class Main
             }
 
         }
-        LOGGER.log(Level.INFO,"Enter the GradeLevel:");
+         LOGGER.log(Level.INFO,"Enter the gradeLevel:");
         String grade=input.next();
         Student student=new Student(name,gpa,grade);
         int temp=0;
         do {
 
-            LOGGER.log(Level.INFO,"\n1.Update\n2.CheckData\n3.Exit\nEnter the Choice:");
+             LOGGER.log(Level.INFO,"\n1.Update\n2.CheckData\n3.Exit\nEnter the Choice:");
             int key = input.nextInt();
             switch (key) {
                 case 1 -> {
