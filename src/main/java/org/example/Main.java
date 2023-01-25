@@ -7,9 +7,9 @@ import java.util.logging.Logger;
 class Student
 {
     private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    public  float gpa;
+    float gpa;
     public final String name;
-    public String  grade;
+    String  grade;
     Student(String name,float gpa,String  grade)
     {
         this.name=name;
