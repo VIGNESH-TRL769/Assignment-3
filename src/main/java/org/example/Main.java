@@ -6,9 +6,9 @@ import java.util.logging.Logger;
 class Student
 {
     public static final Logger LOGGER =  Logger.getLogger("InfoLogging");
-    public  float gpa;
+    float gpa;
     public final String name;
-    public String  grade;
+    String  grade;
     Student(String name,float gpa,String  grade)
     {
         this.name=name;
