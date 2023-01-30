@@ -106,7 +106,7 @@ public class Main {
                 }
 
             } catch (Exception e) {
-                String value = "Please Enter Valid Deatils:" + e;
+                String value = "Please Enter Valid Numbers:" + e;
                 LOGGER.info(value);
                 input.nextLine();
             }
