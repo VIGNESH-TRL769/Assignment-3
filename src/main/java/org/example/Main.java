@@ -81,8 +81,6 @@ public class Main {
         Student student = new Student(name, gpa, grade);
         int temp = 0;
         do {
-            try {
-
                 LOGGER.info("\n1.Update\n2.CheckData\n3.Exit\nEnter the Choice:");
                 int key = input.nextInt();
                 switch (key) {
@@ -105,11 +103,6 @@ public class Main {
                     }
                 }
 
-            } catch (Exception e) {
-                String value = "Please Enter Valid Numbers:" + e;
-                LOGGER.info(value);
-                input.nextLine();
-            }
-        } while (temp != 1);
+            }while (temp != 1);
     }
 }
